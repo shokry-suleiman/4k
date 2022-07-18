@@ -1,28 +1,22 @@
 <template>
-  <div id="app">
-    <img alt="Vue logo" src="./assets/logo.png">
-    <HelloWorld msg="Welcome to Your Vue.js App"/>
-  </div>
+	<div id="app" class="bg-dark">
+		<TvHeader />
+		<router-view />
+	</div>
 </template>
-
 <script>
-import HelloWorld from './components/HelloWorld.vue'
-
+import TvHeader from'./components/TvHeader.vue'
 export default {
-  name: 'App',
-  components: {
-    HelloWorld
-  }
+	name: 'app',
+	components:{
+		TvHeader
+	},
+	data: function () {
+		return {
+
+		}
+	},
 }
 </script>
-
 <style>
-#app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-  margin-top: 60px;
-}
 </style>
