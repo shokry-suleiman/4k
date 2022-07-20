@@ -1,15 +1,15 @@
 <template>
 	<div id="app" class="bg-dark">
-		<TvHeader />
+		<AppHeader />
 		<router-view />
 	</div>
 </template>
 <script>
-import TvHeader from'./components/TvHeader.vue'
+import AppHeader from'./components/AppHeader.vue'
 export default {
 	name: 'app',
 	components:{
-		TvHeader
+		AppHeader
 	},
 	data: function () {
 		return {

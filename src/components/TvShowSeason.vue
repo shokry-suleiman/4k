@@ -1,22 +1,23 @@
 <template>
-	<div class="d-flex align-items-center justify-content-center w-100 cursor-pointer position-relative preview">
-		<img :src="season.image.medium" alt="" class="w-100">
-		<div class="overlay d-flex flex-column pse-10 ptb-10">
+	<div
+		class="d-flex flex-column flex-lg-row align-items-center justify-content-center w-100 cursor-pointer position-relative h-100 preview">
+		<img :src="season.image.medium" alt="" class="w-100" v-defaultImage>
+		<div class="overlay flex-column pse-10 ptb-10 d-none d-lg-flex">
 			<div class="d-flex align-items-center justify-content-between mt-auto">
 				<div class="text-white size-14 weight-700 mt-auto">
 					Season {{ season.number }}
 				</div>
 			</div>
 		</div>
+		<div class="text-white size-8 weight-700 mrt-4 d-lg-none">
+			Season {{ season.number }}
+		</div>
 	</div>
 </template>
-
 <script>
 export default {
 	name: 'TvShowSeason',
 	props: ['season']
-		
-	
 }
 </script>
 

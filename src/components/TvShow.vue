@@ -1,7 +1,8 @@
 <template>
-	<div class="d-flex align-items-center justify-content-center w-100 cursor-pointer position-relative preview">
-		<img :src="tvShow?.image?.medium" alt="" class="w-100">
-		<div class="overlay d-flex flex-column pse-10 ptb-10">
+	<div
+		class="d-flex flex-column flex-lg-row align-items-center justify-content-center w-100 cursor-pointer position-relative preview h-100">
+		<img :src="tvShow?.image?.medium" alt="" class="w-100" v-defaultImage>
+		<div class="overlay flex-column pse-10 ptb-10 d-none d-lg-flex">
 			<div class="d-flex align-items-center justify-content-between mt-auto">
 				<div class="text-white size-14 weight-700 mt-auto">
 					{{ tvShow?.name }}
@@ -12,15 +13,20 @@
 				</div>
 			</div>
 		</div>
+		<div class="text-white size-8 weight-700 mrt-4 d-lg-none">
+			{{ tvShow?.name }}
+		</div>
+		<div class="d-flex align-items-center d-lg-none">
+			<img src="../assets/icons/star.png" alt="" class="star mre-4">
+			<div class="text-white size-6 weight-400">{{ tvShow?.rating?.average }}</div>
+		</div>
 	</div>
 </template>
 
 <script>
 export default {
 	name: 'TvShow',
-	props: ['tvShow']
-		
-	
+	props: ['tvShow'],
 }
 </script>
 
